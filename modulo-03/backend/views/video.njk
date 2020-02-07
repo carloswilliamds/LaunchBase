@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <title>Mike Brito -  {{item.title}}</title>
+{% endblock %}
+
+{% block content %}
+    <div id="wrapper" class="card-page-video">
+        <h1>{{item.title}}</h1>
+    </div>
+
+    <section class="card-page-video">
+        <div class="card" id="{{ item.id}}">
+            <div class="card__video-conteiner">
+                 <iframe src="https://youtube.com.br/embed/{{ item.id}}" frameborder="0"></iframe>
+
+            </div>
+            <div class="card__content">
+                <p>{{item.title}}</p>
+            </div>
+            <div class="card__info">
+                <p>{{item.duration}}</p>
+                <p class="card__price">{{item.price}}</p>
+            </div>
+        
+        </div>
+
+        </section>
+
+{% endblock %}
